@@ -1,2 +1,2 @@
 # vue-mastery
-This is a repository to  fllow vue mastery course
+This is a repository to  follow vue mastery course
