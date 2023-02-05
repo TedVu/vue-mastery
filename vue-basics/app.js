@@ -5,6 +5,7 @@ const app = Vue.createApp({
     // this concept is called data interpolation
     return {
       courseGoal: "Master Vue",
+      vueLink: "https://vuejs.org/",
     };
   },
 });
