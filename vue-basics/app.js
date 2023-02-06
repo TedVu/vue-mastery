@@ -4,7 +4,8 @@ const app = Vue.createApp({
     // now the the data can be used in html where vue controls
     // this concept is called data interpolation
     return {
-      courseGoal: "Master Vue",
+      courseGoalA: "Master Vue",
+      courseGoalB: "<h1>Learn Vue</h1>",
       vueLink: "https://vuejs.org/",
     };
   },
@@ -12,9 +13,9 @@ const app = Vue.createApp({
     printGoal() {
       const randomNumber = Math.random();
       if (randomNumber < 0.5) {
-        return "Learn Vue!";
+        return this.courseGoalA;
       } else {
-        return "Master Vue!";
+        return this.courseGoalB;
       }
     },
   },

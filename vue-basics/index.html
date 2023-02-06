@@ -18,8 +18,8 @@
     </header>
     <section id="user-goal">
       <!-- we can execute javascript expression in double curly braces and v-bind expression -->
-      <h2>{{ courseGoal }}</h2>
-      <p>{{printGoal()}}</p>
+      <h2>{{ printGoal() }}</h2>
+      <p v-html="printGoal()"></p>
       This is a link to <a v-bind:href="vueLink">Vue</a>
       <p></p>
     </section>
