@@ -1,15 +1,19 @@
 <template>
   <div class="container">
+    <HeaderComponent/>
     <h1>Hello World</h1>
   </div>
 </template>
 
 <script>
 
+import HeaderComponent from "./components/Header.vue";
+
 export default {
   name: 'App',
   // registering a component here
   components: {
+    HeaderComponent
   }
 } 
 </script>
