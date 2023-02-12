@@ -1,7 +1,6 @@
 <template>
   <div class="container">
-    <HeaderComponent/>
-    <h1>Hello World</h1>
+    <HeaderComponent title="Task Tracker"/>
   </div>
 </template>
 
@@ -13,7 +12,7 @@ export default {
   name: 'App',
   // registering a component here
   components: {
-    HeaderComponent
+    HeaderComponent,
   }
 } 
 </script>
