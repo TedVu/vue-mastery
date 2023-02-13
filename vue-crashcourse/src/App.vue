@@ -29,25 +29,25 @@ export default {
         id: 1,
         text:'Doctor appointment 1',
         day: 'Marh 1sy at 2:30PM',
-        reminder: true
+        reminder: false
       },
       {
         id: 2,
         text:'Doctor appointment 2',
         day: 'Marh 1sy at 2:30PM',
-        reminder: true
+        reminder: false
       },
       {
         id: 3,
         text:'Doctor appointment 3',
         day: 'Marh 1sy at 2:30PM',
-        reminder: true
+        reminder: false
       },
       {
         id: 4,
         text:'Doctor appointment 4',
         day: 'Marh 1sy at 2:30PM',
-        reminder: true
+        reminder: false
       }
     ]
   }
