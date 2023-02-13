@@ -1,5 +1,5 @@
 <template>
-    <button class="btn"> {{ text }}</button>
+    <button @click="onClick()" :style="{background: color}" class="btn"> {{ text }}</button>
 </template>
 
 <script>
@@ -8,6 +8,14 @@
         props: {
             text :{
                 type: String
+            },
+            color: {
+                type: String
+            }
+        },
+        methods: {
+            onClick(){
+                console.log('Add button clicked')
             }
         }
     }
