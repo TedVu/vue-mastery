@@ -1,21 +1,21 @@
 <template>
   <div class="container">
     <HeaderComponent title='Task tracker'/>
-    <TaskComponent :tasks="tasks"/>
+    <TasksComponent :tasks="tasks"/>
   </div>
 </template> 
 
 <script>
 
 import HeaderComponent from "./components/Header.vue";
-import TaskComponent from './components/Tasks.vue';
+import TasksComponent from './components/Tasks.vue';
 
 export default {
   name: 'App',
   // registering a component here
   components: {
     HeaderComponent,
-    TaskComponent
+    TasksComponent
   },
   data() {
     return {
