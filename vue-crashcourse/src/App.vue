@@ -1,18 +1,55 @@
 <template>
   <div class="container">
     <HeaderComponent title='Task tracker'/>
+    <TaskComponent :tasks="tasks"/>
   </div>
 </template> 
 
 <script>
 
 import HeaderComponent from "./components/Header.vue";
+import TaskComponent from './components/Tasks.vue';
 
 export default {
   name: 'App',
   // registering a component here
   components: {
     HeaderComponent,
+    TaskComponent
+  },
+  data() {
+    return {
+      tasks: []
+    }
+  },
+  created() {
+    console.log('created called');
+    this.tasks = [
+      {
+        id: 1,
+        text:'Doctor appointment 1',
+        day: 'Marh 1sy at 2:30PM',
+        reminder: true
+      },
+      {
+        id: 2,
+        text:'Doctor appointment 2',
+        day: 'Marh 1sy at 2:30PM',
+        reminder: true
+      },
+      {
+        id: 3,
+        text:'Doctor appointment 3',
+        day: 'Marh 1sy at 2:30PM',
+        reminder: true
+      },
+      {
+        id: 4,
+        text:'Doctor appointment 4',
+        day: 'Marh 1sy at 2:30PM',
+        reminder: true
+      }
+    ]
   }
 } 
 </script>
