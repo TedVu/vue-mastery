@@ -1,8 +1,8 @@
 <template>
   <div class="container">
-    <HeaderComponent title="Task Tracker"/>
+    <HeaderComponent title='Task tracker'/>
   </div>
-</template>
+</template> 
 
 <script>
 

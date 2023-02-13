@@ -1,13 +1,24 @@
 <template>
     <header>
         <h1> {{title}}</h1>
+        <ButtonComponent text="Add Task"/>
     </header>
 </template>
 
 <script>
+
+import ButtonComponent from './Button.vue';
     export default {
         name: 'HeaderComponent',
-        props: ['title']
+        props: {
+            title: {
+                type:String,
+                default: 'Hello world'
+            }
+        },
+        components: {
+            ButtonComponent
+        }
     }
 </script>
 
