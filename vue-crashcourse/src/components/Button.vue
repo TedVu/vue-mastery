@@ -3,6 +3,8 @@
 </template>
 
 <script>
+
+import ButtonCode from './ButtonCode';
     export default {
         name: 'ButtonComponent',
         props: {
@@ -11,11 +13,18 @@
             },
             color: {
                 type: String
+            },
+            buttonCode:{
+                type: ButtonCode
             }
         },
         methods: {
             onClick(){
-                console.log('Add button clicked')
+                if(this.buttonCode === ButtonCode.ADD){
+                    // emit add event
+                } else if(this.buttonCode === ButtonCode.DELETE){
+                    // emit delete event
+                }
             }
         }
     }

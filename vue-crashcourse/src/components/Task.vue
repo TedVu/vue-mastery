@@ -1,12 +1,13 @@
 <template>
     <div     :class="[task.reminder ? 'reminder' : '', 'task']">
         <h1> {{ task.text }}</h1>
-        <ButtonComponent color="red" text="Delete Task"/>
+        <ButtonComponent color="red" text="Delete Task" :buttonCode="deleteButtonCode" />
     </div>
 </template>
 
 <script>
 
+import ButtonCode from './ButtonCode';
 import ButtonComponent from './Button.vue';
 
     export default {
@@ -14,11 +15,12 @@ import ButtonComponent from './Button.vue';
         props: {
             task: {
                 type: Object
-            }
+            },
+            deleteButtonCode: ButtonCode.DELETE
         },
         components:{
           ButtonComponent
-        }
+        },
     }
 </script>
 
