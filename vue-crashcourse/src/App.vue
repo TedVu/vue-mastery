@@ -1,7 +1,7 @@
 <template>
   <div class="container">
     <HeaderComponent title='Task tracker'/>
-    <TasksComponent :tasks="tasks"/>
+    <TasksComponent @delete-task="handleDeleteTask" :tasks="tasks"/>
   </div>
 </template> 
 
@@ -20,6 +20,11 @@ export default {
   data() {
     return {
       tasks: []
+    }
+  },
+  methods: {
+    handleDeleteTask(id){
+      console.log('task', id);
     }
   },
   created() {

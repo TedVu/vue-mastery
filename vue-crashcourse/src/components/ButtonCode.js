@@ -1,6 +1,6 @@
 const ButtonCode = {
-  ADD: Symbol("ADD"),
-  DELETE: Symbol("Delete"),
+  ADD: "ADD",
+  DELETE: "DELETE",
 };
 
 export default ButtonCode;

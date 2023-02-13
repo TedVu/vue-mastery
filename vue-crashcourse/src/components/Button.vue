@@ -4,8 +4,8 @@
 
 <script>
 
-import ButtonCode from './ButtonCode';
-    export default {
+
+export default {
         name: 'ButtonComponent',
         props: {
             text :{
@@ -15,15 +15,17 @@ import ButtonCode from './ButtonCode';
                 type: String
             },
             buttonCode:{
-                type: ButtonCode
+                type: String
             }
         },
         methods: {
             onClick(){
-                if(this.buttonCode === ButtonCode.ADD){
+                if(this.buttonCode === "ADD"){
                     // emit add event
-                } else if(this.buttonCode === ButtonCode.DELETE){
+                    this.$emit('add-task');
+                } else if(this.buttonCode === "DELETE"){
                     // emit delete event
+                    this.$emit('delete-task');
                 }
             }
         }

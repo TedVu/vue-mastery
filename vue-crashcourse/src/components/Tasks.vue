@@ -1,7 +1,7 @@
 <template>
     <div>
         <div :key="task.id" v-for="task in tasks">
-            <TaskComponent :task="task"/>
+            <TaskComponent @delete-task="$emit('delete-task', task.id)" :task="task"/>
         </div>
     </div>
 </template>
@@ -18,6 +18,8 @@ import TaskComponent from './Task.vue';
         },
         components: {
             TaskComponent
-        }
+        },
+        emits: ['delete-task']
+
     }
 </script>

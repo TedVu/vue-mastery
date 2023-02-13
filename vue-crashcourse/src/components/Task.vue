@@ -1,13 +1,13 @@
 <template>
     <div     :class="[task.reminder ? 'reminder' : '', 'task']">
         <h1> {{ task.text }}</h1>
-        <ButtonComponent color="red" text="Delete Task" :buttonCode="deleteButtonCode" />
+        <ButtonComponent @delete-task="$emit('delete-task', task.id)" color="red" text="Delete Task" buttonCode="DELETE" />
     </div>
 </template>
 
 <script>
 
-import ButtonCode from './ButtonCode';
+
 import ButtonComponent from './Button.vue';
 
     export default {
@@ -15,12 +15,11 @@ import ButtonComponent from './Button.vue';
         props: {
             task: {
                 type: Object
-            },
-            deleteButtonCode: ButtonCode.DELETE
-        },
-        components:{
+            },        },
+        components:{    
           ButtonComponent
         },
+        emits: ['delete-task']
     }
 </script>
 
