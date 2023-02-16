@@ -1,7 +1,7 @@
 <template>
   <div class="container">
     <HeaderComponent title='Task tracker'/>
-    <AddTaskComponent/>
+    <AddTaskComponent @save-task="handleSaveTask"/>
     <TasksComponent @delete-task="handleDeleteTask" :tasks="tasks"/>
   </div>
 </template> 
@@ -30,6 +30,9 @@ export default {
       if(confirm('Are you sure?')){
         this.tasks = this.tasks.filter(task => task.id !== id);
       }
+    },
+    handleSaveTask(taskName, taskDate){
+      console.log('Task name and task date is', taskName, taskDate);
     }
   },
   created() {

@@ -31,7 +31,6 @@ export default {
                     case 'SAVE':
                         this.$emit('save-task');
                         break;
-
                 }
             }
         }

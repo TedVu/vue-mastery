@@ -1,12 +1,11 @@
 <template>
-  <form>
-    <label for="name">Task name:</label><br>
-    <input type="text" id="name" name="name"><br>
-    <label for="day">Date:</label><br>
-    <input type="text" id="day" name="day">
-    <ButtonComponent color="blue" text="Save Task" buttonCode="SAVE"  />
-
-</form>
+    <div>
+        <label for="name">Task name:</label><br>
+        <input type="text" id="name" v-model="taskName"><br>
+        <label for="day">Date:</label><br>
+        <input type="text" id="day" v-model="taskDate">
+        <ButtonComponent @save-task="$emit('save-task', taskName, taskDate)" color="blue" text="Save Task" buttonCode="SAVE"  />
+    </div>
 </template>
 
 
@@ -18,6 +17,12 @@ import ButtonComponent from './Button.vue';
         name: "AddTaskComponent",
         components: {
             ButtonComponent
+        },
+        data(){
+            return {
+                taskName: '',
+                taskDate: ''
+            }
         }
     }
 </script>
