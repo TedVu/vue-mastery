@@ -1,6 +1,7 @@
 <template>
   <div class="container">
     <HeaderComponent title='Task tracker'/>
+    <AddTaskComponent/>
     <TasksComponent @delete-task="handleDeleteTask" :tasks="tasks"/>
   </div>
 </template> 
@@ -9,13 +10,15 @@
 
 import HeaderComponent from "./components/Header.vue";
 import TasksComponent from './components/Tasks.vue';
+import AddTaskComponent from './components/AddTask.vue';
 
 export default {
   name: 'App',
   // registering a component here
   components: {
     HeaderComponent,
-    TasksComponent
+    TasksComponent,
+    AddTaskComponent
   },
   data() {
     return {
@@ -35,26 +38,22 @@ export default {
       {
         id: 1,
         text:'Doctor appointment 1',
-        day: 'Marh 1sy at 2:30PM',
-        reminder: false
+        day: 'March 1st at 2:30PM',
       },
       {
         id: 2,
         text:'Doctor appointment 2',
-        day: 'Marh 1sy at 2:30PM',
-        reminder: false
+        day: 'March 1st at 2:30PM',
       },
       {
         id: 3,
         text:'Doctor appointment 3',
-        day: 'Marh 1sy at 2:30PM',
-        reminder: false
+        day: 'March 1st at 2:30PM',
       },
       {
         id: 4,
         text:'Doctor appointment 4',
-        day: 'Marh 1sy at 2:30PM',
-        reminder: false
+        day: 'March 1st at 2:30PM',
       }
     ]
   }

@@ -1,6 +1,8 @@
 <template>
     <div     :class="[task.reminder ? 'reminder' : '', 'task']">
         <h1> {{ task.text }}</h1>
+        <h2> {{ task.day }}</h2>
+
         <ButtonComponent @delete-task="$emit('delete-task', task.id)" color="red" text="Delete Task" buttonCode="DELETE" />
     </div>
 </template>

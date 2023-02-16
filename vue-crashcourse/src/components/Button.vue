@@ -20,12 +20,18 @@ export default {
         },
         methods: {
             onClick(){
-                if(this.buttonCode === "ADD"){
-                    // emit add event
-                    this.$emit('add-task');
-                } else if(this.buttonCode === "DELETE"){
-                    // emit delete event
-                    this.$emit('delete-task');
+
+                switch(this.buttonCode) {
+                    case 'ADD':
+                        this.$emit('add-task');
+                        break;
+                    case 'DELETE':
+                        this.$emit('delete-task');
+                        break;
+                    case 'SAVE':
+                        this.$emit('save-task');
+                        break;
+
                 }
             }
         }
