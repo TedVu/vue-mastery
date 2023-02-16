@@ -1,6 +1,6 @@
 <template>
   <div class="container">
-    <HeaderComponent title='Task tracker'/>
+    <HeaderComponent @add-task="handleAddTask" title='Task tracker'/>
     <AddTaskComponent @save-task="handleSaveTask"/>
     <TasksComponent @delete-task="handleDeleteTask" :tasks="tasks"/>
   </div>
@@ -22,7 +22,9 @@ export default {
   },
   data() {
     return {
-      tasks: []
+      tasks: [],
+      newTaskName: '',
+      newTaskDate: ''
     }
   },
   methods: {
@@ -33,10 +35,24 @@ export default {
     },
     handleSaveTask(taskName, taskDate){
       console.log('Task name and task date is', taskName, taskDate);
+      this.newTaskName = taskName;
+      this.newTaskDate = taskDate;
+    },
+    handleAddTask(){
+
+      console.log(`This is new task name and new task date ${this.newTaskName} ${this.newTaskDate}`)
+      if(this.newTaskName && this.newTaskDate){
+        this.tasks.push({
+          id: this.tasks.length + 1,
+          text: this.newTaskName,
+          day: this.newTaskDate 
+        })
+      }else{
+        alert('Please make sure you have filled in the task name and task date and save it')
+      }
     }
   },
   created() {
-    console.log('created called');
     this.tasks = [
       {
         id: 1,

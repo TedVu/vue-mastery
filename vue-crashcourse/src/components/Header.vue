@@ -1,7 +1,7 @@
 <template>
     <header>
         <h1> {{title}}</h1>
-        <ButtonComponent color="green" text="Add Task" buttonCode="ADD"/>
+        <ButtonComponent @add-task="$emit('add-task')" color="green" text="Add Task" buttonCode="ADD"/>
     </header>
 </template>
 
